@@ -5,7 +5,7 @@ Welcome to my Music App, a platform designed to enhance your music listening exp
 **Features:**
 
 1. **Listening to Songs:**
-   - Our app allows users to explore and listen to a vast library of songs from various genres, artists, and albums.
+   - This app allows users to explore and listen to a vast library of songs from various genres, artists, and albums.
    - Users can easily search for their favorite songs, albums, or artists using the search functionality.
    - Seamless streaming ensures uninterrupted playback, providing a smooth listening experience.
 
@@ -15,7 +15,7 @@ Welcome to my Music App, a platform designed to enhance your music listening exp
    - Users can manage their downloaded music library, including removing or updating downloads as needed.
 
 3. **Unique Playlists for Singers:**
-   - Our app offers a unique feature that automatically creates playlists based on singers or artists.
+   - This app offers a unique feature that automatically creates playlists based on singers or artists.
    - Users can discover and enjoy curated playlists featuring the best tracks from their favorite singers.
    - These playlists are dynamically updated, ensuring users always have access to the latest and most popular songs from their preferred artists.
 
