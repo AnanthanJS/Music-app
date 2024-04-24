@@ -91,46 +91,105 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <br>
+    <br>
+    <br>
+    <!--##################################### Trending Songs ###########################################-->
+    <div class="container bg-primary">
+        <h2>Trending Songs</h2>
+        <div class="row d-flex justify-content-around bg-danger">
+            {% for i in song %}
+            <div class="card col-auto" style="width: 18rem;">
+                <img src="{% static 'musicbeats/img1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.name}}</h5>
+                    <p class="card-text">{{i.tags}}</p>
+                    <a href="#" class="btn btn-outline-danger">Listen this song</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--##################################### Your Favourite Playlist ###########################################-->
 
-    <!--##################################### Cards ###########################################-->
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <div class="row">
+    <div class="container bg-primary">
+        <h2>Favourite Playlist</h2>
+        <div class="row d-flex justify-content-around bg-danger">
             <div class="card col-auto" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="{% static 'musicbeats/img1.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's
                         content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Listen</a>
                 </div>
             </div>
             <div class="card col-auto" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="{% static 'musicbeats/img2.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's
                         content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Listen</a>
                 </div>
             </div>
             <div class="card col-auto" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="{% static 'musicbeats/img3.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's
                         content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Listen</a>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <!--##################################### Your liked songs ###########################################-->
 
+    <div class="container bg-primary">
+        <h2>Liked Songs</h2>
+        <div class="row d-flex justify-content-around bg-danger">
+            <div class="card col-auto" style="width: 18rem;">
+                <img src="{% static 'musicbeats/img1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Listen</a>
+                </div>
+            </div>
+            <div class="card col-auto" style="width: 18rem;">
+                <img src="{% static 'musicbeats/img2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Listen</a>
+                </div>
+            </div>
+            <div class="card col-auto" style="width: 18rem;">
+                <img src="{% static 'musicbeats/img3.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Listen</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
