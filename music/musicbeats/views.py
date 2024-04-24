@@ -5,3 +5,7 @@ from .models import Song
 def home(request):
     song = Song.objects.all()
     return render(request, 'musicbeats/index.html', {'song': song})
+
+def songs(request):
+    song = Song.objects.all()
+    return render(request, 'musicbeats/songs.html', {'song': song})
