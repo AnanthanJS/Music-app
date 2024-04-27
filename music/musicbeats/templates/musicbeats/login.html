@@ -1,0 +1,59 @@
+{% extends 'musicbeats/headlogin.html' %}
+{% block title %} Login {% endblock %}
+{% load static %}
+{% block body %}
+
+<!--------------Main Container----------------->
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    <!--------------Login Container----------------->
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+
+      <!--------------------Left Box---------------------->
+      <div class="col-md-6 rounded-4 justify-content-center align-items-center">
+        <div class="featured-image">
+          <img src="{% static 'images/img1.jpg' %}" alt="Hello Image" class="img-fluid rounded-6" style="width:100%;">
+        </div>
+      </div>
+
+      <!--------------------Right Box---------------------->
+      <div class="col-md-6" right-box>
+        <div class="row align-items-center">
+          <div class="header-text mb-4">
+            <h1>Hello, Again</h1>
+            <p class="text-secondary" style="font-family: Signika Negative, sans-serif">We are happy to have you back.
+            </p>
+          </div>
+          <form action="/signin.html" method="post">
+
+            {% csrf_token %}
+
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1"><img src="{% static 'images/mail.png' %}" alt="Mail" class="img-fluid" width="22px"
+                  height="22px"></span>
+              <input type="text" id="username" name="username"
+                class="form-control form-control-lg bg-light fs-6 border border-start-0"
+                placeholder="Enter your username" required>
+            </div>
+            <div class="input-group mb-1">
+              <span class="input-group-text" id="basic-addon1"><img src="{% static 'images/password (1).png' %}" alt="Password" class="img-fluid"
+                  width="22px" height="22px"></span>
+              <input type="password" id="pass1" name="pass1"
+                class="form-control form-control-lg bg-light fs-6 border border-start-0"
+                placeholder="Enter your password" required>
+            </div>
+            <div class="input-group mt-3 mb-3">
+              <button type="submit" class="btn btn-lg btn-primary w-100 fs-6 login-button"
+                style="height: 50px; font-family: Signika Negative, sans-serif;">Sign In</button>
+            </div>
+            <div class="row">
+              <small>Don't have account?<a href="register.html">Sign Up</a></small>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

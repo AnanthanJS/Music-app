@@ -1,0 +1,45 @@
+{% extends 'musicbeats/headsignup.html' %}
+{% block title %} Sign Up {% endblock %}
+
+{% block body %}
+  <div class="container reg" style="font-family: Signika Negative, sans-serif;">
+    <h3 style="color: rgb(126, 63, 107);" class="text-center mb-4">CREATE ACCOUNT</h3>
+    <form action="/signup.html" method="post" id="registrationForm">
+
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="" class="required">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="" class="required">Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter the username"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="" class="required">First Name</label>
+        <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter the first name"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="" class="required">Last Name</label>
+        <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter the last name"
+          required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="" class="required">Password</label>
+          <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter your password"
+            required>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="" class="required">Re-enter Password</label>
+          <input type="password" class="form-control" id="pass2" name="pass2"
+            placeholder="Re-enter your password" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">SIGN UP</button>
+    </form>
+  </div>
+{% endblock %}
