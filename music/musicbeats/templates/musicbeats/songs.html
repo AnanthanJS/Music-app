@@ -2,6 +2,10 @@
 {% block title %} All Songs {% endblock %}
 
 {% block body %}
+<br>
+<br>
+<br>
+<br>
 {% for i in song %}
 <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
@@ -12,7 +16,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{i.name}}</h5>
                 <p class="card-text">{{i.tags}}</p>
-                <a href="" class="btn btn-outline-danger">Listen song</a>
+                <a href="/songs/{{i.song_id}}" class="btn btn-outline-danger">Listen song</a>
             </div>
         </div>
     </div>

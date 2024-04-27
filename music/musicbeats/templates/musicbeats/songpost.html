@@ -1,0 +1,25 @@
+{% extends 'musicbeats/basic.html' %}
+{% block title %} All Songs {% endblock %}
+
+{% block body %}
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-fluid float-end" src="/media/{{song.image}}" alt="">
+        </div>
+        <div class="col-md-6">
+             <h2>Title: {{song.name}}</h2>
+            <h5>Category: {{song.tags}}</h5>
+            <h5>Album: {{song.album}}</h5>
+            <h5>Singer: {{song.singer}}</h5>
+            <audio controls>
+                <source src="/media/{{song.song}}" type="audio/ogg">
+            </audio>
+        </div>
+    </div>
+</div>
+{% endblock %}
