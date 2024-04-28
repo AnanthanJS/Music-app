@@ -2,9 +2,9 @@
 {% block title %} Sign Up {% endblock %}
 
 {% block body %}
-  <div class="container reg" style="font-family: Signika Negative, sans-serif;">
+  <div class="container reg pt-5" style="font-family: Signika Negative, sans-serif;">
     <h3 style="color: rgb(126, 63, 107);" class="text-center mb-4">CREATE ACCOUNT</h3>
-    <form action="/signup.html" method="post" id="registrationForm">
+    <form action="/signup" method="POST" id="registrationForm">
 
       {% csrf_token %}
 
