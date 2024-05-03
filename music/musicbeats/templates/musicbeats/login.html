@@ -24,21 +24,21 @@
             <p class="text-secondary" style="font-family: Signika Negative, sans-serif">We are happy to have you back.
             </p>
           </div>
-          <form action="/signin.html" method="post">
+          <form action="/login" method="POST">
 
             {% csrf_token %}
 
             <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1"><img src="{% static 'images/mail.png' %}" alt="Mail" class="img-fluid" width="22px"
                   height="22px"></span>
-              <input type="text" id="username" name="username"
+              <input type="text" id="exampleInputEmail1" name="username"
                 class="form-control form-control-lg bg-light fs-6 border border-start-0"
                 placeholder="Enter your username" required>
             </div>
             <div class="input-group mb-1">
               <span class="input-group-text" id="basic-addon1"><img src="{% static 'images/password (1).png' %}" alt="Password" class="img-fluid"
                   width="22px" height="22px"></span>
-              <input type="password" id="pass1" name="pass1"
+              <input type="password" id="pass1" name="password"
                 class="form-control form-control-lg bg-light fs-6 border border-start-0"
                 placeholder="Enter your password" required>
             </div>

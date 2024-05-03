@@ -17,7 +17,14 @@ def songpost(request, id):
     song = Song.objects.filter(song_id=id).first()
     return render(request, 'musicbeats/songpost.html', {'song': song})
 
-def login(request, user):
+def user_login(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username = username, password = password)
+        from django.contrib.auth import login
+        login(request, user)
+        
     return render(request, 'musicbeats/login.html')
 
 def signup(request):
