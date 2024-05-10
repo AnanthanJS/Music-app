@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from .models import Song
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 # Create your views here.
@@ -46,3 +46,12 @@ def signup(request):
         return redirect('/')
 
     return render(request, 'musicbeats/signup.html')
+
+
+def logout(request):
+    logout(request)
+    return redirect('home')
+
+
+def watchlater(request):
+    return render(request, 'musicbeats/watchlater.html')

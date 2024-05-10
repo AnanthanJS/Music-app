@@ -17,9 +17,13 @@
             <h5>Album: {{song.album}}</h5>
             <h5>Singer: {{song.singer}}</h5>
             <h5>Credits: <a href="{{song.credit}}" target="_blank">Click here</a></h5>
-            <audio controls>
+            <audio controls class="mt-3">
                 <source src="/media/{{song.song}}" type="audio/ogg">
             </audio>
+            <div class="mt-3">
+                <a><button class="btn btn-outline-danger">Add to Watch later</button></a>
+                <a download href="/media/{{ song.song }}"><button class="btn btn-outline-danger">Download Song</button></a>
+            </div>
         </div>
     </div>
 </div>
