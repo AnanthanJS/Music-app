@@ -1,7 +1,8 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
-from .models import Song
+from .models import Song, Watchlater
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.db.models import Case, When
 
 
 # Create your views here.
@@ -51,7 +52,31 @@ def signup(request):
 def logout(request):
     logout(request)
     return redirect('home')
-
+    
 
 def watchlater(request):
-    return render(request, 'musicbeats/watchlater.html')
+    if request.method == "POST":
+        user = request.user
+        video_id = request.POST['video_id']
+        watch = Watchlater.objects.filter(user = user)
+        
+        for i in watch:
+            if video_id == i.video_id:
+                message = "Your video is already added."
+                break
+        else:
+            watchlater = Watchlater(user = user, video_id = video_id)
+            watchlater.save()
+            message = "Your video is successfully added."
+        song = Song.objects.filter(song_id = video_id).first()        
+        return render(request, f"musicbeats/songpost.html", {"song": song, "message": message})
+    
+    wl = Watchlater.objects.filter(user = request.user)
+    ids = []
+    for i in wl:
+        ids.append(i.video_id)
+        
+    preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(ids)])
+    song = Song.objects.filter(song_id__in=ids).order_by(preserved)
+        
+    return render(request, 'musicbeats/watchlater.html', {'song': song})
